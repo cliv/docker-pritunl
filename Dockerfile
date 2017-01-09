@@ -4,7 +4,7 @@ MAINTAINER include <cliv@ath0.net>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -yq && \
-    apt-get install -yq software-properties-common python-software-properties apt-utils && \
+    apt-get install -yq software-properties-common python-software-properties apt-utils iptables && \
     echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.2.list && \
     echo "deb http://repo.pritunl.com/stable/apt xenial main" > /etc/apt/sources.list.d/pritunl.list && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 42F3E95A2C4F08279C4960ADD68FA50FEA312927 && \
