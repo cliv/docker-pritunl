@@ -2,20 +2,20 @@
 
 ## Pull the image
 
-    docker pull include/docker-pritunl
+    docker pull cliv/docker-pritunl
 
 ## Data Volume
 
-    mkdir -p /mnt/docker-pritunl/var/lib/mongodb
+    mkdir -p /mnt/docker-pritunl:/var/lib/mongodb
 
 ## Run Pritunl
 
-    docker run -d --privileged \
-        -v /mnt/docker-pritunl/var/lib/mongodb:/var/lib/mongodb \
+    docker run -d \
+        -v {path}:/mongodb \ # MongoDB Data
         -p 1194:1194/udp \
         -p 1194:1194/tcp \
         -p 9700:9700/tcp \
-        include/docker-pritunl
+        cliv/docker-pritunl
 
 ## Configure Pritunl
 
