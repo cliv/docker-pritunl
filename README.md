@@ -6,7 +6,7 @@
 
 ## Run Pritunl
 
-    docker run -d \
+    docker run -d --privileged \
         -v {path}:/mongodb \ # MongoDB Data
         -p 1194:1194/udp \
         -p 1194:1194/tcp \
