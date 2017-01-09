@@ -24,8 +24,11 @@ ADD pritunl.conf /etc/pritunl.conf
 ADD cmdline.sh /usr/local/bin/cmdline.sh
 
 EXPOSE 1194
-EXPOSE 9700
+EXPOSE 443
+EXPOSE 80
 
 VOLUME ["/mongodb"]
 
 ENTRYPOINT ["/usr/local/bin/cmdline.sh"]
+
+CMD ["/usr/bin/tail", "-f", "/var/log/pritunl.log"]

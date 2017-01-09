@@ -10,7 +10,8 @@
         -v {path}:/mongodb \ # MongoDB Data
         -p 1194:1194/udp \
         -p 1194:1194/tcp \
-        -p 9700:9700/tcp \
+        -p 9700:443/tcp \
+        -p 9699:80/tcp \
         cliv/docker-pritunl
 
 ## Configure Pritunl
