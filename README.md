@@ -4,10 +4,6 @@
 
     docker pull cliv/docker-pritunl
 
-## Data Volume
-
-    mkdir -p /mnt/docker-pritunl:/var/lib/mongodb
-
 ## Run Pritunl
 
     docker run -d \
